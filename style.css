@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #2978b5;
+  --primary-dark: #1a5f8d;
+  --secondary: #71c7ec;
+  --text-dark: #2b2d42;
+  --text-light: #f8f9fa;
+  --success: #57cc99;
+  --warning: #ffb703;
+  --light-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: linear-gradient(120deg, #f0f5ff 0%, #f8f9fa 100%);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar .sidebar-content {
+  background: linear-gradient(180deg, var(--card-bg) 0%, #e6f2ff 100%);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1rem;
+}
+
+.stButton > button {
+  color: var(--text-light);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--primary-dark) 0%,
+    var(--primary) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--shadow);
+}
+
+.stButton > button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.metric-container {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.metric-container:hover {
+  transform: translateY(-5px);
+}
+
+.metric-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.metric-value.positive {
+  color: var(--success);
+}
+
+.metric-value.negative {
+  color: #e63946;
+}
+
+.stDataFrame {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.stDataFrame thead tr {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary);
+}
+
+.stPlot {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.stTextInput > div > div > input,
+.stSelectbox > div > div > select,
+.stMultiselect > div > div > select {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus,
+.stSelectbox > div > div > select:focus,
+.stMultiselect > div > div > select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(41, 120, 181, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(120deg, #1a1a2e 0%, #16213e 100%);
+    color: #e6e6e6;
+  }
+
+  .sidebar .sidebar-content {
+    background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .card,
+  .metric-container,
+  .stPlot,
+  .stDataFrame {
+    background-color: #0f3460;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--secondary);
+  }
+
+  .metric-label {
+    color: #e6e6e6;
+  }
+}
