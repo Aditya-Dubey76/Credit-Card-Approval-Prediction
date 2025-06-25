@@ -7,5 +7,5 @@
 ## Dataset-
 
 •⁠  ⁠*Name: AER-credit_card_data.csv*  
-•⁠  ⁠*Source: Applied Econometrics with R*
+•⁠  ⁠*Source: Applied Econometrics with R
 •⁠  ⁠**Link: https://drive.google.com/file/d/1yZYoe1ooRgHgj6sflICT5p5a85cmVbWI/view?usp=sharing**
